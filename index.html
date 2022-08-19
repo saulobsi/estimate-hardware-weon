@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Calculadora de Hardware WeON</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.3/dist/css/uikit.min.css" />
+        <link rel="stylesheet" href="css/main.css?n=5" />
+        <link rel="import" href="result.html" >
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.3/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.3/dist/js/uikit-icons.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+        <!-- <script src="js/main.js" type="module"></script> -->
+        <script src="js/main.js?n=5"></script>
+    </head>
+    <body>
+
+        <div class="uk-container">
+
+            <div>
+                <img src="images/logo_weon.png" width="200px" class="uk-align-center">
+            </div>
+
+            <form class="uk-form-stacked"></form>
+                <label for="operation_name"> Ambiente </label>
+                <select class="uk-select">
+                    <option value="GCP"> Google Cloud </option>
+                    <option value="VMWARE"> VMWare </option>
+                </select>
+
+                <label for="operation_name"> Nome da Operação </label>
+                <input type="text" id="operation_name" class="uk-input" placeholder="Informe o nome da operação">
+
+                <label for="agents"> Quantidade De Agentes</label>
+                <input type="number" id="agents" class="uk-input" value="30">
+
+                <label for="dialers"> Quantidade de Discadores </label>
+                <input type="number" id="dialers" class="uk-input" placeholder="0">
+
+                <label for="simultaneous_calls"> Chamadas Simultâneas </label>
+                <input type="number" id="simultaneous_calls" class="uk-input" placeholder="300">
+            </form>
+            
+            <div class="uk-align-right uk-margin-top">
+                <button class="uk-button uk-button-primary" onclick="estimate()" > Calcular </button>
+                
+            </div>
+
+            <div>
+                <hr class="uk-divider-icon">
+            </div>
+            
+            
+            <div id="div_result">
+
+            </div>
+            <!-- <div uk-spinner></div> -->
+            <!-- Resultado-->
+            
+
+            <div class="uk-cover-container">
+                <img src="images/Chiwe-01.png" alt="Chiwe" width="150px" class="uk-animation-reverse uk-transform-origin-top-right uk-align-center" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">
+            </div>
+
+        </div>
+    </body>
+</html>
